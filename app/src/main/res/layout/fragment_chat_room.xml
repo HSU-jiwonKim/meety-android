@@ -2,14 +2,189 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#0D0D14">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- 헤더 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="#16161F">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="←"
+            android:textColor="#8888A8"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="📚"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/circle_blue"
+            android:layout_marginEnd="12dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="토익 900 목표반"
+                android:textColor="#F0F0F5"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멤버 4명"
+                android:textColor="#8888A8"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="⋮"
+            android:textColor="#8888A8"
+            android:textSize="20sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- 날짜 구분선 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="채팅방 화면"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#1E1E2A" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  오늘  " android:textColor="#444460" android:textSize="11sp" />
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#1E1E2A" />
+    </LinearLayout>
+
+    <!-- 메시지 목록 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 상대방 메시지 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="김지원" android:textColor="#8888A8" android:textSize="11sp" android:layout_marginBottom="4dp" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오늘 스터디 9시에 시작해요~" android:textColor="#F0F0F5" android:textSize="14sp" android:background="#16161F" android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:maxWidth="220dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오후 9:00" android:textColor="#444460" android:textSize="10sp" android:layout_marginStart="6dp" android:layout_marginBottom="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 상대방 메시지 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="이" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" android:gravity="center" android:background="@drawable/circle_green" android:layout_marginEnd="8dp" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="이수연" android:textColor="#8888A8" android:textSize="11sp" android:layout_marginBottom="4dp" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="넵! 준비하고 있어요 📚" android:textColor="#F0F0F5" android:textSize="14sp" android:background="#16161F" android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:maxWidth="220dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오후 9:01" android:textColor="#444460" android:textSize="10sp" android:layout_marginStart="6dp" android:layout_marginBottom="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 내 메시지 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom|end" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오후 9:02" android:textColor="#444460" android:textSize="10sp" android:layout_marginEnd="6dp" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="저도요! 오늘 RC 파트 끝내봐요" android:textColor="#FFFFFF" android:textSize="14sp" android:background="#4F8EF7" android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:maxWidth="220dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 상대방 메시지 3 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom" android:layout_marginBottom="12dp">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="박" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" android:gravity="center" android:background="@drawable/circle_purple" android:layout_marginEnd="8dp" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="박민준" android:textColor="#8888A8" android:textSize="11sp" android:layout_marginBottom="4dp" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RC 어제꺼 복습도 같이 하면 좋을 것 같아요" android:textColor="#F0F0F5" android:textSize="14sp" android:background="#16161F" android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:maxWidth="220dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오후 9:03" android:textColor="#444460" android:textSize="10sp" android:layout_marginStart="6dp" android:layout_marginBottom="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 내 메시지 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom|end" android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="bottom">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="오후 9:04" android:textColor="#444460" android:textSize="10sp" android:layout_marginEnd="6dp" android:layout_marginBottom="2dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="좋아요 👍" android:textColor="#FFFFFF" android:textSize="14sp" android:background="#4F8EF7" android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:maxWidth="220dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 입력창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="#16161F">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1E1E2A"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginEnd="10dp">
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="메시지를 입력하세요..."
+                android:textColor="#F0F0F5"
+                android:textSize="14sp"
+                android:background="@null"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="↑"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/circle_blue" />
+    </LinearLayout>
 
 </LinearLayout>

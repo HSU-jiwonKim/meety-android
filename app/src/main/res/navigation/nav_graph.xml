@@ -2,11 +2,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/feedFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment android:id="@+id/loginFragment"
         android:name="com.bugzero.meety.auth.LoginFragment"
-        android:label="로그인" />
+        android:label="로그인">
+        <action
+            android:id="@+id/action_login_to_onboarding"
+            app:destination="@id/onboardingFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment android:id="@+id/signupFragment"
         android:name="com.bugzero.meety.auth.SignupFragment"
@@ -14,7 +20,13 @@
 
     <fragment android:id="@+id/onboardingFragment"
         android:name="com.bugzero.meety.auth.OnboardingFragment"
-        android:label="온보딩" />
+        android:label="온보딩">
+        <action
+            android:id="@+id/action_onboarding_to_feed"
+            app:destination="@id/feedFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment android:id="@+id/studentIdUploadFragment"
         android:name="com.bugzero.meety.auth.StudentIdUploadFragment"
@@ -42,7 +54,11 @@
 
     <fragment android:id="@+id/chatListFragment"
         android:name="com.bugzero.meety.chat.ChatListFragment"
-        android:label="채팅" />
+        android:label="채팅">
+        <action
+            android:id="@+id/action_chatList_to_chatRoom"
+            app:destination="@id/chatRoomFragment" />
+    </fragment>
 
     <fragment android:id="@+id/chatRoomFragment"
         android:name="com.bugzero.meety.chat.ChatRoomFragment"
