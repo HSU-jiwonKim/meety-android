@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D14">
+
+    <!-- 상단 헤더 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingBottom="0dp">
+
+        <!-- 진행바 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <View android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#4F8EF7" android:layout_marginEnd="4dp" />
+            <View android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#4F8EF7" android:layout_marginEnd="4dp" />
+            <View android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#4F8EF7" android:layout_marginEnd="4dp" />
+            <View android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#2A2A3A" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="어떤 모임을 원하세요? 🎯"
+            android:textColor="#F0F0F5"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="관심 있는 모임 유형을 모두 선택해주세요"
+            android:textColor="#8888A8"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+
+    <!-- 선택 카드들 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 스터디 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#16161F"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="📚"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:background="#1E1E2A" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="스터디" android:textColor="#F0F0F5" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="토익, 자격증, 전공 공부" android:textColor="#8888A8" android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:text="✓"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="#4F8EF7" />
+            </LinearLayout>
+
+            <!-- 운동 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#16161F"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🏃" android:textSize="20sp" android:gravity="center" android:background="#1E1E2A" />
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="운동" android:textColor="#F0F0F5" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="러닝, 헬스, 요가, 구기종목" android:textColor="#8888A8" android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:gravity="center" android:background="#2ECC8A" />
+            </LinearLayout>
+
+            <!-- 프로젝트 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#16161F"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="💻" android:textSize="20sp" android:gravity="center" android:background="#1E1E2A" />
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="프로젝트" android:textColor="#F0F0F5" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="앱개발, 공모전, 창업" android:textColor="#8888A8" android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="24dp" android:layout_height="24dp" android:background="#2A2A3A" />
+            </LinearLayout>
+
+            <!-- 취미 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#16161F"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🎨" android:textSize="20sp" android:gravity="center" android:background="#1E1E2A" />
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="취미" android:textColor="#F0F0F5" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="그림, 음악, 영화, 보드게임" android:textColor="#8888A8" android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="24dp" android:layout_height="24dp" android:background="#2A2A3A" />
+            </LinearLayout>
+
+            <!-- 맛집/카페 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:background="#16161F"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🍜" android:textSize="20sp" android:gravity="center" android:background="#1E1E2A" />
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="맛집/카페" android:textColor="#F0F0F5" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="같이 밥 먹고 카페 탐방" android:textColor="#8888A8" android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="24dp" android:layout_height="24dp" android:background="#2A2A3A" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 다음 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="이전"
+            android:textColor="#8888A8"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#16161F"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="2"
+            android:text="다음 →"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#4F8EF7" />
+    </LinearLayout>
+
+</LinearLayout>

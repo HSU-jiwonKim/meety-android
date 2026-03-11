@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <fragment android:id="@+id/loginFragment"
+        android:name="com.bugzero.meety.auth.LoginFragment"
+        android:label="로그인" />
+
+    <fragment android:id="@+id/signupFragment"
+        android:name="com.bugzero.meety.auth.SignupFragment"
+        android:label="회원가입" />
+
+    <fragment android:id="@+id/onboardingFragment"
+        android:name="com.bugzero.meety.auth.OnboardingFragment"
+        android:label="온보딩" />
+
+    <fragment android:id="@+id/studentIdUploadFragment"
+        android:name="com.bugzero.meety.auth.StudentIdUploadFragment"
+        android:label="학생증 업로드" />
+
+    <fragment android:id="@+id/feedFragment"
+        android:name="com.bugzero.meety.feed.FeedFragment"
+        android:label="피드" />
+
+    <fragment android:id="@+id/meetingDetailFragment"
+        android:name="com.bugzero.meety.feed.MeetingDetailFragment"
+        android:label="모임 상세" />
+
+    <fragment android:id="@+id/meetingCreateFragment"
+        android:name="com.bugzero.meety.feed.MeetingCreateFragment"
+        android:label="모임 만들기" />
+
+    <fragment android:id="@+id/myTeamFragment"
+        android:name="com.bugzero.meety.myteam.MyTeamFragment"
+        android:label="내 모임" />
+
+    <fragment android:id="@+id/profileEditFragment"
+        android:name="com.bugzero.meety.myteam.ProfileEditFragment"
+        android:label="프로필 편집" />
+
+    <fragment android:id="@+id/chatListFragment"
+        android:name="com.bugzero.meety.chat.ChatListFragment"
+        android:label="채팅" />
+
+    <fragment android:id="@+id/chatRoomFragment"
+        android:name="com.bugzero.meety.chat.ChatRoomFragment"
+        android:label="채팅방" />
+
+    <fragment android:id="@+id/scheduleSyncFragment"
+        android:name="com.bugzero.meety.schedule.ScheduleSyncFragment"
+        android:label="스케줄 싱크" />
+
+    <fragment android:id="@+id/myPageFragment"
+        android:name="com.bugzero.meety.mypage.MyPageFragment"
+        android:label="마이페이지" />
+
+</navigation>
