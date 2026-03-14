@@ -189,7 +189,7 @@ main        최종 발표용 (직접 push 금지)
 
 <div align="center">
 
-**BugZero 팀** · 한성대학교 캡스톤 디자인 2025
+**BugZero 팀** · 한성대학교 캡스톤 디자인 2026
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HSU-jiwonKim/meety-android)
 
