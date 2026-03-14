@@ -89,8 +89,7 @@
 └── Recommend    Google Gemini API (gemini-pro)
 
 🎨 UI/UX
-├── Animation    Lottie
-└── Image        Glide
+└── Animation    Lottie
 
 🔧 Tools
 ├── Version      Git / GitHub
